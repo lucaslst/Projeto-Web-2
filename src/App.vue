@@ -5,6 +5,18 @@
 </template>
 
 <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: url('https://images2.alphacoders.com/261/thumb-1920-26102.jpg');
+    background-size: cover;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

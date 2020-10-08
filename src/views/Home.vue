@@ -1,11 +1,10 @@
 <template>
 <div class = "home">
- <body background="../assets/loginb.jpg"></body>
-  <header>
+ <header>
     <div class="center">
     <nav>
       <ul>
-        <li><img src="../assets/logof.png" alt="" height="140" width="300" > <img src="imagem/icone.png" height="40" width="50 " alt=""></li>
+        <li><img src="../assets/logof.png" alt="" height="140" width="300" > <img src="../assets/icone.png" height="40" width="50 " alt=""></li>
         <li><a href="#">Início</a></li>
         <li><a href="#">Genêros</a></li>
         <li><a href="#">Autores</a></li>
@@ -22,8 +21,7 @@
     </nav>
   </div>
   </header>
-
-  <div class = "container">
+    <div class = "container">
         <div class="row">
             <div class="col-4">
                 <div class="card bg-light m-3" style="width: 15rem;  border-radius: 50px 50px 50px 50px;" >
@@ -70,8 +68,6 @@
             </div>
             </div>
     </div>
-
-    
     <p></p>
     <div class="card" style="background-color: indigo; width: 20rem; left: 36%; right: 40%; border-radius: 50px 50px 50px 50px;" >
     <h2 style="color: ivory; font-weight:bolder;" >Destaques</h2>
@@ -157,12 +153,11 @@
         </div>
       
         <p></p>
-      
+        
         <div id="mid">
           <button type="button" class="btn btn-dark" style="text-align: center; text-size-adjust: 15px;">Mais livros</button>
       </div>
     </div>
-
 </div>
 </template>
 
@@ -174,21 +169,9 @@ export default {
 </script>
 
 <style>
-   #mid{
-            position: absolute;
-            left: 45%;
-            right: 50%;
-            height: 100px;
-            width: 100px;
-          }
-
-.home{
-    
-    background-color:rgb(54, 5, 99);
-    background-blend-mode: hard-light;
-}
 
 *{margin: 0; padding: 0; box-sizing: border-box;}
+
 .center{
  max-width: 1100px;
  margin: 0 150;
@@ -197,7 +180,7 @@ export default {
 }
 
 ul{
-height: 100px;
+height: 300px;
 
 }
 
@@ -213,17 +196,20 @@ header li{
     margin: 0 10px;
 
 }
+
+ #mid{
+            position: absolute;
+            left: 45%;
+            right: 50%;
+            height: 100px;
+            width: 100px;
+          }
+
 header a{
 
     text-decoration: none;
     color: ivory;
     
-}
-
-.home{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
 }
 
 .container{
@@ -246,5 +232,4 @@ header a{
     -o-background-size: cover;
     background-size: cover;
   }
-
 </style>

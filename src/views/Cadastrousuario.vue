@@ -1,6 +1,6 @@
 <template>
-  <div class="cadastrousuario">
-    <body background="../assets/loginb.jpg"></body>
+  <div class="cadastrous">
+   
     <div class="container-fluid">
     <div class="row">
     <form class="text-center border border-light p-5" action="#!" style="background-color: indigo; ">
@@ -14,7 +14,7 @@
         
         </div>
         
-        <button class="btn btn-info my-4 btn-block" type="submit" > Confirmar </button>
+        <button class="btn btn-info my-4 btn-block" type="submit" onclick="salvar()" > Confirmar </button>
         
     </form>
     </div>
@@ -31,16 +31,6 @@ export default {
 </script>
 
 <style>
-.cadastrousuario{
-    background-color:rgb(54, 5, 99);
-    background-blend-mode: hard-light;
-}
-
-.cadastrousuario{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
 form{
     width: 500px;
@@ -55,7 +45,29 @@ form{
     -moz-border-radius: 50px 50px 50px 50px;
     -webkit-border-radius: 50px 50px 50px 50px;
     border-color: #2ecc71; 
-    border-width: 5px;
-    
+    border-width: 5px;   
+}
+
+button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+button[type="submit"]:hover {
+    background: #2ecc71
+}
+
+.forgot {
+    text-decoration: underline
 }
 </style>

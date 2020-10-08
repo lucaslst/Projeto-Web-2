@@ -1,6 +1,6 @@
 <template>
-  <div class="login">
-    <div class="container-fluid">
+<div class="log">
+  <div class="container-fluid">
       <div class="row">
           <div class="col-md-6">
               <div class="card">
@@ -11,18 +11,17 @@
                       <input type="password" name="" id="slogin" placeholder="Senha"> 
                       <a class="forgot text-muted" href="#">Esqueceu a senha?</a> 
                       <p></p>
-                      <a class="forgot text-muted" id="cd" @click = "cadastrarusuario" >Cadastrar-se gratuitamente</a>
+                      <a class="forgot text-muted" id="cd" @click = "cadastrarusuario"  >Cadastrar-se gratuitamente</a>
                       <input type="submit" value="Login" @click = "logar">
                   </form>
               </div>
           </div>
       </div>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
 export default {
   name: 'Login',
   methods: {
@@ -38,23 +37,13 @@ export default {
 </script>
 
 <style>
-.login{
-    background: url('https://www.wallpaperflare.com/static/207/453/248/digital-art-nature-sea-rainbows-wallpaper.jpg');
-    background-size: cover;
-    }
-
-.login{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
 .box {
     width: 500px;
     padding: 0px;
     position: absolute;
     left: 65%;
-    background: white;
+    background: rgb(255, 255, 255);
     text-align: center;
     transition: 0.25s;
     margin-top: 100px;
