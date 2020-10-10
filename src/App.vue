@@ -13,7 +13,9 @@ body {
 }
 
 body {
-    background: url('https://images2.alphacoders.com/261/thumb-1920-26102.jpg');
+    background: url('../src/assets/loginb.jpg');
+     background-color:rgb(54, 5, 99);
+    background-blend-mode: hard-light;
     background-size: cover;
 }
 
