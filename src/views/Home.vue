@@ -1,8 +1,11 @@
 <template>
 <div class = "home">
+
  <header>
+    
     <div class="center">
     <nav>
+   
       <ul>
         <li><img src="../assets/logof.png" alt="" height="140" width="300" > <img src="../assets/icone.png" height="40" width="50 " alt=""></li>
         <li><a href="#">Início</a></li>
@@ -11,16 +14,16 @@
         <li><a href="#">Publicar</a></li>
         <li><a href="#">Perfil</a></li>
         <li>
-          <form class="pesquisa">
             <input type="search" id="texto"  placeholder="Oq você procura?">
             <img src="../assets/lupa2-removebg-preview.png" height="48" width="60" walt="" class="btn">
 
-          </form>
         </li>
       </ul>
+
     </nav>
   </div>
   </header>
+  
     <div class = "container">
         <div class="row">
             <div class="col-4">
@@ -180,13 +183,13 @@ export default {
 }
 
 ul{
-height: 300px;
+height: 100px;
 
 }
 
 header{
 
-    padding: 9px 0;
+    padding: 6px 0;
     text-align: center;
     background:transparent;
 }

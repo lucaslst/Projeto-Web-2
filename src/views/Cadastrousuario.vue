@@ -50,7 +50,7 @@ form{
 
 button[type="submit"] {
     border: 0;
-    background: none;
+    background: white;
     display: block;
     margin: 20px auto;
     text-align: center;
