@@ -7,12 +7,12 @@
                   <form class="box">
                     <img src="../assets/logof.png" alt="Erro" width=410 height=200>
                     <img src="../assets/frase.png" alt="Erro" width=400 height=80>
-                      <input type="text" name="" id="elogin" placeholder="Email"> 
-                      <input type="password" name="" id="slogin" placeholder="Senha"> 
+                      <input type="text" name="" id="elogin" placeholder="Email" v-model="email"> 
+                      <input type="password" name="" id="slogin" placeholder="Senha" v-model="senha"> 
                       <a class="forgot text-muted" href="#">Esqueceu a senha?</a> 
                       <p></p>
-                      <a class="forgot text-muted" id="cd" @click = "cadastrarusuario"  >Cadastrar-se gratuitamente</a>
-                      <input type="submit" value="Login" @click = "logar">
+                      <a class="forgot text-muted" id="cd" @click="cadastrarusuario"  >Cadastrar-se gratuitamente</a>
+                      <input type="submit" value="Login" @click="logar">
                   </form>
               </div>
           </div>
@@ -23,17 +23,48 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: "Login",
+  data() {
+    return {
+      email: "",
+      senha: "",
+      baseURI: "http://localhost:2000/lergustar/api/usuarios/login",
+    };
+  },
+  created: function() {
+    if(localStorage.getItem("usuario")) {
+        this.$router.replace("/home");
+    } 
+  }, 
   methods: {
     cadastrarusuario() {
      this.$router.push({ name: "Cadastrousuario"}).catch(()=>{});
    },
-   logar() {
-     this.$router.push({ name: "Home"}).catch(()=>{});
-   }
-  }
+    logar: function() {
+      let obj = {
+        email: this.email,
+        senha: this.senha,
+      };
+      if(this.email.length == 0 || this.senha.length == 0){
+        alert("preencher todos os campos!");
+      }
+      if(this.email.length < 5){
+        alert("E-Mail inválido!")
+      }
+      if(this.senha.length < 7){
+        alert(" A senha deve ter no minimo 8 digitos")
+      }
+      else{
+        this.$http.post(this.baseURI, obj).then((result) => {
+        if (result.data != "") {
+          localStorage.setItem("usuario", JSON.stringify(result.data));
+        }
+      });
+      }
+    },
+  },
+};
 
-}
 </script>
 
 <style>
